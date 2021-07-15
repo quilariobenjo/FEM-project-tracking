@@ -1,0 +1,9 @@
+.content-wrapper {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+  &--small {
+    @extend .content-wrapper;
+    max-width: 62rem;
+  }
+}

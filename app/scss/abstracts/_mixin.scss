@@ -1,0 +1,9 @@
+@mixin center-flex($flex-jc, $flex-ai) {
+  display: flex;
+  justify-content: $flex-jc;
+  align-items: $flex-ai;
+}
+@mixin style-text($col) {
+  text-transform: uppercase;
+  color: $col;
+}

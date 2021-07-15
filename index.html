@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app/scss/style.css" />
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-wrapper">
+        <nav class="navbar">
+          <a href="#"><img src="./images/logo.svg" alt="logo of website" /></a>
+          <button
+            class="btn btn--menu"
+            type="button"
+            aria-label="toggle menu"
+            aria-expanded="false"
+          >
+            <img
+              src="./images/icon-hamburger.svg"
+              alt="icon of hamburger open"
+              class="navbar__icon"
+            />
+          </button>
+          <div class="navbar__menu">
+            <a href="#" class="navbar__links">Product</a>
+            <a href="#" class="navbar__links">Features</a>
+            <a href="#" class="navbar__links">Pricing</a>
+            <a href="#" class="navbar__links">Login</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="content-wrapper">
+          <img
+            class="hero__img"
+            src="./images/illustration-devices.svg"
+            alt="picture of phone and laptop"
+          />
+          <div class="hero__content">
+            <div class="hero__content--dash">
+              <span>New</span> Monograph Dashboard
+            </div>
+            <h1 class="hero__content--text">
+              Powerful insights into your team
+            </h1>
+            <p class="hero__content--sub-text">
+              Project planning and time tracking for agile teams
+            </p>
+            <div class="hero__content-button">
+              <button class="btn--sched">Schedule A Demo</button>
+              <button type="button" class="btn--prev" disabled>
+                to see a live preview
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Benjo Quilario</a>.
+      </p>
+    </footer>
+    <script src="/app/js/script.js"></script>
+  </body>
+</html>

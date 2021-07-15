@@ -1,0 +1,74 @@
+.header {
+  padding: 3rem rem(10);
+  z-index: 10;
+  .navbar {
+    @include center-flex($flex-jc: space-between, $flex-ai: center);
+    position: relative;
+    height: rem(60);
+    &__links {
+      color: $veryDarkBlue;
+      font-family: $font-BarlowCondensed;
+      font-weight: $font-700;
+      position: relative;
+      &:hover {
+        &::before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background-color: $veryDarkBlue;
+          bottom: rem(-10);
+        }
+      }
+      &:last-child {
+        position: relative;
+        color: $grayishBlue;
+        font-weight: $font-700;
+        &::before {
+          content: "";
+          position: absolute;
+          top: rem(9);
+          left: rem(-35);
+          background-color: $grayishBlue;
+          height: rem(8);
+          width: rem(7);
+          border-radius: 50%;
+        }
+      }
+    }
+    &__menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, rem(60));
+      align-items: center;
+      justify-items: center;
+      position: absolute;
+      top: rem(-1000);
+      @include breakpoint-up(medium) {
+        position: unset;
+        display: flex;
+        gap: rem(68);
+        top: 100%;
+      }
+    }
+    &__menu.active {
+      background-color: $white;
+      box-shadow: 0 rem(10) rem(20) rgba(0, 0, 0, 0.19),
+        0 rem(6) rem(6) rgba(0, 0, 0, 0.23);
+      border-radius: rem(20);
+      z-index: 99;
+      top: 100%;
+      height: 40vh;
+      transition: all 0.5s;
+      width: 100%;
+      @include breakpoint-up(medium) {
+        background-color: unset;
+        box-shadow: unset;
+        border-radius: unset;
+        top: unset;
+        height: unset;
+        width: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@keyframes animate-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-9.375rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes animate-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-9.375rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

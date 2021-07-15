@@ -1,0 +1,22 @@
+.hero {
+  overflow: hidden;
+  padding: rem(50) rem(10) rem(94);
+  .content-wrapper {
+    @include center-flex($flex-jc: center, $flex-ai: center);
+    flex-direction: column;
+    gap: rem(79);
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__img {
+    transform: translateX(6.25rem);
+    max-width: clamp(rem(500), 100%, 120%);
+    @include breakpoint-up(medium) {
+      transform: translateX(-3.875rem);
+      order: 2;
+      flex: 1 0 50%;
+    }
+  }
+}

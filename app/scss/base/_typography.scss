@@ -1,0 +1,40 @@
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-family: $font-BarlowCondensed;
+}
+.hero__content {
+  flex: 1 0 50%;
+  &--dash {
+    @include style-text($col: $grayishBlue);
+    padding: rem(20) 0;
+    animation: animate-right 1s ease-in-out;
+    span {
+      border-radius: rem(16);
+      background-color: $veryDarkBlue;
+      color: $lightGrayishBlue;
+      font-weight: $font-700;
+      padding: 8px;
+      margin-right: 1rem;
+      font-size: rem(15);
+      animation: animate-right 2s ease-in-out;
+    }
+  }
+  &--text {
+    font-size: clamp(rem(38), 6vw, rem(62));
+    @include style-text($col: $veryDarkBlue);
+    font-weight: 700;
+    line-height: rem(67);
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    animation: animate-top 0.9s ease-in-out;
+  }
+  &--sub-text {
+    max-width: rem(280);
+    color: $darkGrayishBlue;
+    line-height: 1.5;
+    margin-bottom: rem(66);
+    animation: animate-top 1.6s ease-in-out;
+  }
+}

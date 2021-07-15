@@ -1,0 +1,59 @@
+button,
+.btn {
+  display: inline-block;
+  position: relative;
+  border: none;
+  outline: none;
+  background: transparent;
+  &:focus-visible {
+    outline: $red;
+  }
+}
+.btn--menu {
+  cursor: pointer;
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+.btn--sched {
+  background-color: $red;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: rem(16) rem(20);
+  letter-spacing: 1px;
+  @include style-text($col: $lightGrayishBlue);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-property: color;
+  transition-duration: 0.8s;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $veryDarkBlue;
+    border: 2px solid $red;
+    &::before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $white;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+}
+.btn--prev {
+  background-color: $lightGrayishBlue;
+  padding: rem(18);
+  @include style-text($col: $grayishBlue);
+}
