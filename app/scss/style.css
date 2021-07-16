@@ -102,7 +102,8 @@ a:visited {
 a:focus-visible,
 a:active:focus-visible,
 a:visited:focus-visible {
-  outline: #ff5c5c;
+  outline: 3px dashed #ff5c5c;
+  outline-offset: 3px;
 }
 
 img {
@@ -181,7 +182,8 @@ button,
 
 button:focus-visible,
 .btn:focus-visible {
-  outline: #ff5c5c;
+  outline: 3px solid #ff5c5c;
+  outline-offset: 3px;
 }
 
 .btn--menu {
